@@ -119,3 +119,5 @@ aa[1:100, 1:100] <- 1
 # barcode
 binary_barcode <- compute.barcode(dataset=data, adjmatrix=aa)
 probability_barcode <- compute.barcode.proba(dataset=data, adjmatrix=aa)
+
+#Select a feature set of gene pairs
