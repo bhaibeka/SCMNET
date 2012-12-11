@@ -8,7 +8,7 @@ rm(list=ls())
 `compute.barcode` <- function(dataset, adjmatrix)
 {	
 	edges <- which(adjmatrix == 1) ## a vector of indices
-	barcode <- do.call(rbind, lapply(edges, function(edge, nn,theweights) {
+	barcode <- do.call(rbind, lapply(edges, function(edge, nn, theweights) {
 						j <- edge%%nn ## index 1:100
 						if(j == 0)
 							j <- nn   ## if j == 0, replace 0 by 100 
