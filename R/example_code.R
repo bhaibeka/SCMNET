@@ -50,7 +50,15 @@ rm(list=ls())
 			})
 	return(sum(log10(likelihood), na.rm=TRUE) / sum(!is.na(likelihood)))
 }
-	
+
+# Returns the difference between one subtype and the mean, median, maximum, or minimum of all other subtypes for each gene pair
+`top.features` <- function(proba,n){
+	cols1 <- (1:ncol(proba))[1:ncol(proba)%%n==0]
+	topfeatures <- do.call(cbind,lapply(cols1, function(x) { 
+						abs(proba[,x] - rowMeans(proba[,cols1[-x/n]]))
+	}))
+	return(topfeatures)
+}
 		
 #############
 ## libraries
@@ -123,5 +131,11 @@ binary_barcode <- compute.barcode(dataset=data, adjmatrix=aa)
 
 # probability barcode for each subtype
 subtype_barcode <- do.call(cbind,lapply(1:ncol(subtype.weights), function(x) { compute.barcode.proba(dataset = data, theweight = subtype.weights[,x], adjmatrix = aa)}))
+
+# feature selection
+subtype_features <- top.features(subtype_barcode, 3)
+
+# sort features
+
 
 # ToDo: Will write a function to determine probability of given subtype, sort, and take top 10.  This is too specific to dataset.
