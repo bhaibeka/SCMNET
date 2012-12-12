@@ -52,12 +52,13 @@ rm(list=ls())
 }
 
 # Returns the difference between one subtype and the mean, median, maximum, or minimum of all other subtypes for each gene pair
-`top.features` <- function(proba,n){
+`top.features` <- function(proba,n,top, m){
 	cols1 <- (1:ncol(proba))[1:ncol(proba)%%n==0]
-	topfeatures <- do.call(cbind,lapply(cols1, function(x) { 
-						abs(proba[,x] - rowMeans(proba[,cols1[-x/n]]))
+	features <- do.call(cbind,lapply(cols1, function(x) { 
+						abs(proba[,x] - m(proba[,cols1[-x/n]]))
 	}))
-	return(topfeatures)
+	top_features <- do.call(cbind,lapply(lapply(1:ncol(features), function(x){sort(features[,x], TRUE)[1:top]}), names))
+	return(top_features)
 }
 		
 #############
@@ -133,7 +134,7 @@ binary_barcode <- compute.barcode(dataset=data, adjmatrix=aa)
 subtype_barcode <- do.call(cbind,lapply(1:ncol(subtype.weights), function(x) { compute.barcode.proba(dataset = data, theweight = subtype.weights[,x], adjmatrix = aa)}))
 
 # feature selection
-subtype_features <- top.features(subtype_barcode, 3)
+subtype_features <- top.features(proba = subtype_barcode, n = 3,top = 10, m = rowMeans)
 
 # sort features
 
