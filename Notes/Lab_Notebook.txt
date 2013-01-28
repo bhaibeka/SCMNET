@@ -1,0 +1,20 @@
+11/24/12:  
+-git and github tutorial
+
+11/29/12
+-succeeded in pushing files to github bhaibeka/SCMNET
+
+11/30/12
+-feature selection:  selecting 10 gene pairs and computing likelihood
+
+12/10/12
+-determined the weighted probability for each subtype using lapply:  had an issue with weighted.means as even when I inputed the subtype.weights it continued to weight everything as 1, and then I finally realized that I was using nrows when I should have been using ncol in my apply.  Moving on … 
+
+-12/11/12
+-wrote a function top.features to find the difference between each subtype and the mean of other subtypes for each gene pair.
+-will determine top 10 features for each subtype tomorrow.
+
+-12/12/12
+-added to the top.features function to return the top gene pairs for each subtype
+-need to include more comments above function
+-teleconference with Dr. Haibe-Kains at 3:00pm

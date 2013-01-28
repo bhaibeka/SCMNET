@@ -1,0 +1,564 @@
+length(results[[2]])
+length(results[[3]])
+length(results[[4]])
+length(results[[4]][[4]])
+length(results[[4]][[3]])
+length(results[[4]][[2]])
+length(results[[4]][[353]])
+length(results[[4]][[1]])
+length(results[[353]][[1]])
+length(results[[353]][[2]])
+length(results[[353]][[3]])
+length(results[[353]][[4]])
+length(results[[352]][[1]])
+length(results[[]][[1]])
+length(results[['']][[1]])
+length(results[[1:353]][[1]])
+class(results)
+lapply(list, class)
+lapply(results, class)
+lapply(lapply(results, class))
+results <- lapply(1:ncol(test),function(z){lapply(1:length(subtype.classif_type),function(y){lapply(1:ncol(type[[y]]),mean(function(x){vegdist(t(train[[z]][[y]][,c(1,x)]),methods = "jaccard")}))})})
+lapply(1:ncol(test),function(z){lapply(1:length(subtype.classif_type),function(y){lapply(1:ncol(type[[y]]),function(x){vegdist(t(train[[z]][[y]][,c(1,x)]),methods = "jaccard"),mean})})})
+lapply(1:ncol(test),function(z){lapply(1:length(subtype.classif_type),function(y){lapply(1:ncol(type[[y]]),function(x){mean(vegdist(t(train[[z]][[y]][,c(1,x)]),methods = "jaccard"))})})})
+results <- lapply(1:ncol(test),function(z){lapply(1:length(subtype.classif_type),function(y){lapply(1:ncol(type[[y]]),function(x){mean(vegdist(t(train[[z]][[y]][,c(1,x)]),methods = "jaccard"))})})})
+lapply(1:ncol(test),function(z){lapply(1:length(subtype.classif_type),function(y){mean(lapply(1:ncol(type[[y]]),function(x){(vegdist(t(train[[z]][[y]][,c(1,x)]),methods = "jaccard")}))})})
+lapply(1:ncol(test),function(z){lapply(1:length(subtype.classif_type),function(y){mean(lapply(1:ncol(type[[y]]),function(x){(vegdist(t(train[[z]][[y]][,c(1,x)]),methods = "jaccard")}))})})
+results <- lapply(1:ncol(test),function(z){lapply(1:length(subtype.classif_type),function(y){mean(lapply(1:ncol(type[[y]]),function(x){vegdist(t(train[[z]][[y]][,c(1,x)]),methods = "jaccard")}))})})
+results
+results <- lapply(1:ncol(test),function(z){lapply(1:length(subtype.classif_type),function(y){lapply(1:ncol(type[[y]]),function(x){(vegdist(t(train[[z]][[y]][,c(1,x)]),methods = "jaccard"))})})})
+results <- lapply(1:ncol(test),function(z){lapply(1:length(subtype.classif_type),function(y){mean(lapply(1:ncol(type[[y]]),function(x){(vegdist(t(train[[z]][[y]][,c(1,x)]),methods = "jaccard"))}))})})
+warnings()
+mean(unlist(results[[353]][[1]]))
+results <- lapply(1:ncol(test),function(z){lapply(1:length(subtype.classif_type),function(y){lapply(1:ncol(type[[y]]),function(x){(vegdist(t(train[[z]][[y]][,c(1,x)]),methods = "jaccard"))})})})
+mean(unlist(results[[353]][[1]]))
+mean(unlist(results[[353]][[]]))
+mean(unlist(results[[353]][[1]]))
+mean(unlist(results[[i]][[1]]))
+for (i in 1:length(subtype.classif_type)){
+mean(unlist(results[[i]][[1]]))
+for (i in 1:length(subtype.classif_type)){
+mean(unlist(results[[353]][[i]]))
+test <_ mean(unlist(results[[353]][[i]]))
+test <- mean(unlist(results[[353]][[i]]))
+for (i in 1:length(subtype.classif_type)){
+test <- mean(unlist(results[[353]][[i]]))
+}
+test
+for (i in 1:length(subtype.classif_type)){
+test[i] <- mean(unlist(results[[353]][[i]]))
+}
+test[[1]]
+test[[2]]
+test[[3]]
+test[[4]]
+test[[5]]
+for (i in 1:ncol(test))){#
+    for(j in 1:length(subtype.classif_type){#
+        final[i][j] <- mean(unlist(results[i][j])#
+}#
+}
+for (i in 1:ncol(test))){#
+    for(j in 1:length(subtype.classif_type)){#
+        final[i][j] <- mean(unlist(results[i][j])#
+}#
+}
+for (i in 1:ncol(test)){#
+    for(j in 1:length(subtype.classif_type)){#
+        final[i][j] <- mean(unlist(results[i][j]))#
+}#
+}
+ncol(test)
+testp,1
+test[,]
+test[,1]
+test <- binary_barcode[,1:353]
+for (i in 1:ncol(test)){#
+    for(j in 1:length(subtype.classif_type)){#
+        final[i][j] <- mean(unlist(results[i][j]))#
+}
+}
+for (i in 1:ncol(test)){#
+    for(j in 1:length(subtype.classif_type)){#
+        final <- mean(unlist(results[i][j]))#
+}#
+}
+ncol(test)
+final
+for (i in 1:ncol(test)){#
+    for(j in 1:length(subtype.classif_type)){#
+        final[i] <- mean(unlist(results[j]))#
+}#
+}
+final
+for (i in 1:ncol(test)){#
+    for(j in 1:length(subtype.classif_type)){#
+        final[i] <- mean(unlist(results[[i]][j]))#
+}#
+}
+final
+length(final)
+with(results,sum(results[[2]]))
+results[[353,2]]
+results[[353]][[2]]
+split(results,results[[1:353]])
+do.call(rbind,results)
+results1 <- do.call(rbind,results)
+results1[1]
+results1[2]
+results1[3]
+results1
+head(results1)
+rowSums(results1)
+rowSums(sum(results1))
+results[1,1]
+results1[1,1]
+sum(results1[1,1])
+sum(unlist(results1[1,1]))
+sum(unlist(results1[1,2]))
+sum(unlist(results1[1,3]))
+sum(unlist(results1[1,4]))
+do.call(rbind,results)
+do.call(rbind,results1)
+results2 <- do.call(cbind,results1)
+apply(results1,sum)
+lapply(results1,sum)
+test_type <- do.call(cbind,lapply(1:ncol(test), function(y){lapply(1:length(subtype.classif_type), function(x){test[,y][subtype_features[,x]]})}))
+head(test_type
+)
+test_type <- do.call(cbind,lapply(1:length(subtype.classif_type), function(x){test[,1][subtype_features[,x]]}))
+head(test_type)
+for i in (1:ncol(test)){#
+    test_type <- do.call(cbind,lapply(1:length(subtype.classif_type), function(x){test[,i][subtype_features[,x]]}))#
+    # test1 <- test[subtype_features[,1]]#
+    # test2 <- test[subtype_features[,2]]#
+    # test3 <- test[subtype_features[,3]]#
+    # test4 <- test[subtype_features[,4]]#
+}
+for (i in 1:ncol(test)){#
+    test_type <- do.call(cbind,lapply(1:length(subtype.classif_type), function(x){test[,i][subtype_features[,x]]}))#
+    # test1 <- test[subtype_features[,1]]#
+    # test2 <- test[subtype_features[,2]]#
+    # test3 <- test[subtype_features[,3]]#
+    # test4 <- test[subtype_features[,4]]#
+}
+test_type
+test_type[1]
+test_type[[1]]
+`compute.distance` <- function(subtype.classif,subtype.classif_type, test1, type, subtype_features){#
+for (i in 1:ncol(test)){#
+    test_type <- do.call(cbind,lapply(1:length(subtype.classif_type), function(x){test[subtype_features[,x]]}))#
+    # test1 <- test[subtype_features[,1]]#
+    # test2 <- test[subtype_features[,2]]#
+    # test3 <- test[subtype_features[,3]]#
+    # test4 <- test[subtype_features[,4]]#
+}}
+test <- compute.distance(subtype.classif,subtype.classif_type,test[,1],type,subtype_features)
+`compute.distance` <- function(subtype.classif,subtype.classif_type, test1, type, subtype_features){#
+    test_type <- do.call(cbind,lapply(1:length(subtype.classif_type), function(x){test[subtype_features[,x]]}))#
+    # test1 <- test[subtype_features[,1]]#
+    # test2 <- test[subtype_features[,2]]#
+    # test3 <- test[subtype_features[,3]]#
+    # test4 <- test[subtype_features[,4]]#
+    train <- do.call(cbind, lapply(1:length(subtype.classif_type), function(x){cbind(test_type[[y]][[x]],type[[x]])})}))#
+    # train1 <- cbind(test1,type1)#
+    # train2 <- cbind(test2,type2)#
+    # train3 <- cbind(test3,type3)#
+    # train4 <- cbind(test4,type4)#
+    results <-  do.call(rbind,                  lapply(1:length(subtype.classif_type),function(y){lapply(1:ncol(type[[y]]),function(x){(vegdist(t(train[[z]][[y]][,c(1,x)]),methods = "jaccard"))})})#
+    # results_1 <- lapply(1:ncol(type1),function(x){vegdist(t(train1[,c(1,x)]),methods = "jaccard")})#
+    # results_2 <- lapply(1:ncol(type2),function(x){vegdist(t(train2[,c(1,x)]),methods = "jaccard")})#
+    # results_3 <- lapply(1:ncol(type3),function(x){vegdist(t(train3[,c(1,x)]),methods = "jaccard")})#
+    # results_4 <- lapply(1:ncol(type4),function(x){vegdist(t(train4[,c(1,x)]),methods = "jaccard")})#
+    mean_results <- 1-mean(unlist(results))#
+    # final_results_1 <- 1 - mean(unlist(results_1))#
+    # final_results_2 <- 1 - mean(unlist(results_2))#
+    # final_results_3 <- 1 - mean(unlist(results_3))#
+    # final_results_4 <- 1 - mean(unlist(results_4))#
+    final_result <- which(mean_results == maximum)#
+    return(final_result)#
+    }#
+}
+`compute.distance` <- function(subtype.classif,subtype.classif_type, test1, type, subtype_features){#
+    test_type <- do.call(cbind,lapply(1:length(subtype.classif_type), function(x){test[subtype_features[,x]]}))#
+    # test1 <- test[subtype_features[,1]]#
+    # test2 <- test[subtype_features[,2]]#
+    # test3 <- test[subtype_features[,3]]#
+    # test4 <- test[subtype_features[,4]]#
+    train <- do.call(cbind, lapply(1:length(subtype.classif_type), function(x){cbind(test_type[[y]][[x]],type[[x]])})}))#
+    # train1 <- cbind(test1,type1)#
+    # train2 <- cbind(test2,type2)#
+    # train3 <- cbind(test3,type3)#
+    # train4 <- cbind(test4,type4)#
+    results <-  do.call(rbind,                  lapply(1:length(subtype.classif_type),function(y){lapply(1:ncol(type[[y]]),function(x){(vegdist(t(train[[z]][[y]][,c(1,x)]),methods = "jaccard"))})}))#
+    # results_1 <- lapply(1:ncol(type1),function(x){vegdist(t(train1[,c(1,x)]),methods = "jaccard")})#
+    # results_2 <- lapply(1:ncol(type2),function(x){vegdist(t(train2[,c(1,x)]),methods = "jaccard")})#
+    # results_3 <- lapply(1:ncol(type3),function(x){vegdist(t(train3[,c(1,x)]),methods = "jaccard")})#
+    # results_4 <- lapply(1:ncol(type4),function(x){vegdist(t(train4[,c(1,x)]),methods = "jaccard")})#
+    mean_results <- 1-mean(unlist(results))#
+    # final_results_1 <- 1 - mean(unlist(results_1))#
+    # final_results_2 <- 1 - mean(unlist(results_2))#
+    # final_results_3 <- 1 - mean(unlist(results_3))#
+    # final_results_4 <- 1 - mean(unlist(results_4))#
+    final_result <- which(mean_results == maximum)#
+    return(final_result)#
+}
+`compute.distance` <- function(subtype.classif,subtype.classif_type, test1, type, subtype_features){#
+    test_type <- do.call(cbind,lapply(1:length(subtype.classif_type), function(x){test[subtype_features[,x]]}))
+}
+`compute.distance` <- function(subtype.classif,subtype.classif_type, test1, type, subtype_features){#
+    test_type <- do.call(cbind,lapply(1:length(subtype.classif_type), function(x){test[subtype_features[,x]]}))
+train <- do.call(cbind, lapply(1:length(subtype.classif_type), function(x){cbind(test_type[[x]],type[[x]])})}))
+train <- do.call(cbind, lapply(1:length(subtype.classif_type), function(x){cbind(test_type,type[[x]])})}))
+train <- do.call(cbind, lapply(1:length(subtype.classif_type), function(x){cbind(test_type,type[[x]])}))
+`compute.distance` <- function(subtype.classif,subtype.classif_type, test1, type, subtype_features){#
+    test_type <- do.call(cbind,lapply(1:length(subtype.classif_type), function(x){test[subtype_features[,x]]}))#
+# test1 <- test[subtype_features[,1]]#
+# test2 <- test[subtype_features[,2]]#
+# test3 <- test[subtype_features[,3]]#
+# test4 <- test[subtype_features[,4]]#
+    train <- do.call(cbind, lapply(1:length(subtype.classif_type), function(x){cbind(test_type,type[[x]])}))#
+# train1 <- cbind(test1,type1)#
+# train2 <- cbind(test2,type2)#
+# train3 <- cbind(test3,type3)#
+# train4 <- cbind(test4,type4)#
+    results <-  do.call(rbind,                  lapply(1:length(subtype.classif_type),function(x){lapply(1:ncol(type[[x]]),function(x){(vegdist(t(train[[x]][,c(1,y)]),methods = "jaccard"))})}))
+}
+final <- do.call(cbind, lapply(1:ncol(test), function(x){compute.distance(subtype.classif,subtype.classif_type,test[,x],type,subtype_features)}))
+final <- compute.distance(subtype.classif,subtype.classif_type,test[,1],type,subtype_features)}))
+final <- compute.distance(subtype.classif,subtype.classif_type,test[,1],type,subtype_features)
+`compute.distance` <- function(subtype.classif,subtype.classif_type, test1, type, subtype_features){#
+    test_type <- do.call(cbind,lapply(1:length(subtype.classif_type), function(x){test[subtype_features[,x]]}))#
+# test1 <- test[subtype_features[,1]]#
+# test2 <- test[subtype_features[,2]]#
+# test3 <- test[subtype_features[,3]]#
+# test4 <- test[subtype_features[,4]]#
+    train <- do.call(cbind, lapply(1:length(subtype.classif_type), function(x){cbind(test_type,type[[x]])}))#
+# train1 <- cbind(test1,type1)#
+# train2 <- cbind(test2,type2)#
+# train3 <- cbind(test3,type3)#
+# train4 <- cbind(test4,type4)#
+    results <-  do.call(rbind,                  lapply(1:length(subtype.classif_type),function(x){lapply(1:ncol(type[[x]]),function(y){(vegdist(t(train[[x]][,c(1,y)]),methods = "jaccard"))})}))#
+    # results_1 <- lapply(1:ncol(type1),function(x){vegdist(t(train1[,c(1,x)]),methods = "jaccard")})#
+    # results_2 <- lapply(1:ncol(type2),function(x){vegdist(t(train2[,c(1,x)]),methods = "jaccard")})#
+    # results_3 <- lapply(1:ncol(type3),function(x){vegdist(t(train3[,c(1,x)]),methods = "jaccard")})#
+    # results_4 <- lapply(1:ncol(type4),function(x){vegdist(t(train4[,c(1,x)]),methods = "jaccard")})#
+    mean_results <- 1-mean(unlist(results))#
+    # final_results_1 <- 1 - mean(unlist(results_1))#
+    # final_results_2 <- 1 - mean(unlist(results_2))#
+    # final_results_3 <- 1 - mean(unlist(results_3))#
+    # final_results_4 <- 1 - mean(unlist(results_4))#
+    final_result <- which(mean_results == maximum)#
+    return(final_result)#
+}
+final <- compute.distance(subtype.classif,subtype.classif_type,test[,1],type,subtype_features)
+train <- do.call(cbind, lapply(1:length(subtype.classif_type), function(x){cbind(test_type,type[[x]])}))
+head(train)
+train[[1]]
+head(train)
+dim(train)
+test_type <- lapply(1:length(subtype.classif_type), function(x){test[subtype_features[,x]]})
+test_type
+test_type <- lapply(1:length(subtype.classif_type), function(x){test[subtype_features[,x]]})
+test_type
+test_type <- lapply(1:length(subtype.classif_type), function(x){test[,1][subtype_features[,x]]})
+test_type
+test_type <- lapply(1:length(subtype.classif_type), function(x){test[,1][subtype_features[,x]]})
+test[,1]
+test <- binary_barcode[,1:353]
+test_type <- lapply(1:length(subtype.classif_type), function(x){test[,1][subtype_features[,x]]})
+test_type
+train <- do.call(cbind, lapply(1:length(subtype.classif_type), function(x){cbind(test_type[[x]],type[[x]])}))
+train
+train <- lapply(1:length(subtype.classif_type), function(x){cbind(test_type[[x]],type[[x]])}))
+train <- lapply(1:length(subtype.classif_type), function(x){cbind(test_type[[x]],type[[x]])})
+train
+train[[1]]
+train <- lapply(1:length(subtype.classif_type), function(x){cbind(test_type[[x]],type[[x]])})
+train[[2]]
+train[[2]]
+results <- lapply(1:length(subtype.classif_type),function(x){lapply(1:ncol(type[[x]]),function(y){(vegdist(t(train[,c(1,y)]),methods = "jaccard"))})})
+results <- lapply(1:length(subtype.classif_type),function(x){lapply(1:ncol(type[[x]]),function(y){(vegdist(t(train[[x]][,c(1,y)]),methods = "jaccard"))})})
+results
+mean_results <- lapply(1:length(subtype.classif_type), function(x){1-mean(unlist(results[[x]]))}
+)
+mean_results
+final_result <- which(mean_results == maximum)
+mean_results <- do.call(cbind,lapply(1:length(subtype.classif_type), function(x){1-mean(unlist(results[[x]]))})
+)
+mean_results
+final_result <- which(mean_results == maximum)
+maximum <- max(mea_results)#
+    final_result <- which(mean_results == maximum)
+maximum <- max(mean_results)#
+    final_result <- which(mean_results == maximum)
+final_result
+final <-  lapply(1:ncol(test), function(x){compute.distance(subtype.classif,subtype.classif_type,test[,x],type,subtype_features)}))`compute.distance` <- function(subtype.classif,subtype.classif_type, test1, type, subtype_features){#
+    test_type <- lapply(1:length(subtype.classif_type), function(x){test[subtype_features[,x]]})#
+    # test1 <- test[subtype_features[,1]]#
+    # test2 <- test[subtype_features[,2]]#
+    # test3 <- test[subtype_features[,3]]#
+    # test4 <- test[subtype_features[,4]]#
+    train <- lapply(1:length(subtype.classif_type), function(x){cbind(test_type[[x]],type[[x]])}))#
+    # train1 <- cbind(test1,type1)#
+    # train2 <- cbind(test2,type2)#
+    # train3 <- cbind(test3,type3)#
+    # train4 <- cbind(test4,type4)#
+    results <- lapply(1:length(subtype.classif_type),function(x){lapply(1:ncol(type[[x]]),function(y){(vegdist(t(train[,c(1,y)]),methods = "jaccard"))})})#
+    # results_1 <- lapply(1:ncol(type1),function(x){vegdist(t(train1[,c(1,x)]),methods = "jaccard")})#
+    # results_2 <- lapply(1:ncol(type2),function(x){vegdist(t(train2[,c(1,x)]),methods = "jaccard")})#
+    # results_3 <- lapply(1:ncol(type3),function(x){vegdist(t(train3[,c(1,x)]),methods = "jaccard")})#
+    # results_4 <- lapply(1:ncol(type4),function(x){vegdist(t(train4[,c(1,x)]),methods = "jaccard")})#
+    mean_results <- do.call(cbind,lapply(1:length(subtype.classif_type), function(x){1-mean(unlist(results[[x]]))}))#
+    # final_results_1 <- 1 - mean(unlist(results_1))#
+    # final_results_2 <- 1 - mean(unlist(results_2))#
+    # final_results_3 <- 1 - mean(unlist(results_3))#
+    # final_results_4 <- 1 - mean(unlist(results_4))#
+    maximum <- max(mean_results)#
+    final_result <- which(mean_results == maximum)#
+    return(final_result)#
+}
+`compute.distance` <- function(subtype.classif,subtype.classif_type, test1, type, subtype_features){#
+    test_type <- lapply(1:length(subtype.classif_type), function(x){test[subtype_features[,x]]})#
+    # test1 <- test[subtype_features[,1]]#
+    # test2 <- test[subtype_features[,2]]#
+    # test3 <- test[subtype_features[,3]]#
+    # test4 <- test[subtype_features[,4]]#
+    train <- lapply(1:length(subtype.classif_type), function(x){cbind(test_type[[x]],type[[x]])}))#
+    # train1 <- cbind(test1,type1)#
+    # train2 <- cbind(test2,type2)#
+    # train3 <- cbind(test3,type3)#
+    # train4 <- cbind(test4,type4)#
+    results <- lapply(1:length(subtype.classif_type),function(x){lapply(1:ncol(type[[x]]),function(y){(vegdist(t(train[,c(1,y)]),methods = "jaccard"))})})#
+    # results_1 <- lapply(1:ncol(type1),function(x){vegdist(t(train1[,c(1,x)]),methods = "jaccard")})#
+    # results_2 <- lapply(1:ncol(type2),function(x){vegdist(t(train2[,c(1,x)]),methods = "jaccard")})#
+    # results_3 <- lapply(1:ncol(type3),function(x){vegdist(t(train3[,c(1,x)]),methods = "jaccard")})#
+    # results_4 <- lapply(1:ncol(type4),function(x){vegdist(t(train4[,c(1,x)]),methods = "jaccard")})#
+    mean_results <- do.call(cbind,lapply(1:length(subtype.classif_type), function(x){1-mean(unlist(results[[x]]))}))#
+    # final_results_1 <- 1 - mean(unlist(results_1))#
+    # final_results_2 <- 1 - mean(unlist(results_2))#
+    # final_results_3 <- 1 - mean(unlist(results_3))#
+    # final_results_4 <- 1 - mean(unlist(results_4))#
+    maximum <- max(mean_results)#
+    final_result <- which(mean_results == maximum)#
+    return(final_result)#
+}
+test <- binary_barcode[,1:353]#
+#
+`compute.distance` <- function(subtype.classif,subtype.classif_type, test1, type, subtype_features){#
+    test_type <- lapply(1:length(subtype.classif_type), function(x){test[subtype_features[,x]]})#
+    # test1 <- test[subtype_features[,1]]#
+    # test2 <- test[subtype_features[,2]]#
+    # test3 <- test[subtype_features[,3]]#
+    # test4 <- test[subtype_features[,4]]#
+    train <- lapply(1:length(subtype.classif_type), function(x){cbind(test_type[[x]],type[[x]])}))#
+    # train1 <- cbind(test1,type1)#
+    # train2 <- cbind(test2,type2)#
+    # train3 <- cbind(test3,type3)#
+    # train4 <- cbind(test4,type4)#
+    results <- lapply(1:length(subtype.classif_type),function(x){lapply(1:ncol(type[[x]]),function(y){(vegdist(t(train[,c(1,y)]),methods = "jaccard"))})})#
+    # results_1 <- lapply(1:ncol(type1),function(x){vegdist(t(train1[,c(1,x)]),methods = "jaccard")})#
+    # results_2 <- lapply(1:ncol(type2),function(x){vegdist(t(train2[,c(1,x)]),methods = "jaccard")})#
+    # results_3 <- lapply(1:ncol(type3),function(x){vegdist(t(train3[,c(1,x)]),methods = "jaccard")})#
+    # results_4 <- lapply(1:ncol(type4),function(x){vegdist(t(train4[,c(1,x)]),methods = "jaccard")})#
+    mean_results <- do.call(cbind,lapply(1:length(subtype.classif_type), function(x){1-mean(unlist(results[[x]]))}))#
+    # final_results_1 <- 1 - mean(unlist(results_1))#
+    # final_results_2 <- 1 - mean(unlist(results_2))#
+    # final_results_3 <- 1 - mean(unlist(results_3))#
+    # final_results_4 <- 1 - mean(unlist(results_4))#
+    maximum <- max(mean_results)#
+    final_result <- which(mean_results == maximum)#
+return(final_result)#
+}
+`compute.distance` <- function(subtype.classif,subtype.classif_type, test1, type, subtype_features){#
+    test_type <- lapply(1:length(subtype.classif_type), function(x){test[subtype_features[,x]]})#
+# test1 <- test[subtype_features[,1]]#
+# test2 <- test[subtype_features[,2]]#
+# test3 <- test[subtype_features[,3]]#
+# test4 <- test[subtype_features[,4]]#
+    train <- lapply(1:length(subtype.classif_type), function(x){cbind(test_type[[x]],type[[x]])}))#
+# train1 <- cbind(test1,type1)#
+# train2 <- cbind(test2,type2)#
+# train3 <- cbind(test3,type3)#
+# train4 <- cbind(test4,type4)#
+    results <- lapply(1:length(subtype.classif_type),function(x){lapply(1:ncol(type[[x]]),function(y){(vegdist(t(train[,c(1,y)]),methods = "jaccard"))})})#
+# results_1 <- lapply(1:ncol(type1),function(x){vegdist(t(train1[,c(1,x)]),methods = "jaccard")})#
+# results_2 <- lapply(1:ncol(type2),function(x){vegdist(t(train2[,c(1,x)]),methods = "jaccard")})#
+# results_3 <- lapply(1:ncol(type3),function(x){vegdist(t(train3[,c(1,x)]),methods = "jaccard")})#
+# results_4 <- lapply(1:ncol(type4),function(x){vegdist(t(train4[,c(1,x)]),methods = "jaccard")})#
+    mean_results <- do.call(cbind,lapply(1:length(subtype.classif_type), function(x){1-mean(unlist(results[[x]]))}))#
+# final_results_1 <- 1 - mean(unlist(results_1))#
+# final_results_2 <- 1 - mean(unlist(results_2))#
+# final_results_3 <- 1 - mean(unlist(results_3))#
+# final_results_4 <- 1 - mean(unlist(results_4))#
+    maximum <- max(mean_results)#
+    final_result <- which(mean_results == maximum)#
+return(final_result)#
+}
+train <- lapply(1:length(subtype.classif_type), function(x){cbind(test_type[[x]],type[[x]])}))
+train <- lapply(1:length(subtype.classif_type), function(x){cbind(test_type[[x]],type[[x]])})
+`compute.distance` <- function(subtype.classif,subtype.classif_type, test1, type, subtype_features){#
+    test_type <- lapply(1:length(subtype.classif_type), function(x){test[subtype_features[,x]]})#
+# test1 <- test[subtype_features[,1]]#
+# test2 <- test[subtype_features[,2]]#
+# test3 <- test[subtype_features[,3]]#
+# test4 <- test[subtype_features[,4]]#
+    train <- lapply(1:length(subtype.classif_type), function(x){cbind(test_type[[x]],type[[x]])})#
+# train1 <- cbind(test1,type1)#
+# train2 <- cbind(test2,type2)#
+# train3 <- cbind(test3,type3)#
+# train4 <- cbind(test4,type4)#
+    results <- lapply(1:length(subtype.classif_type),function(x){lapply(1:ncol(type[[x]]),function(y){(vegdist(t(train[,c(1,y)]),methods = "jaccard"))})})#
+# results_1 <- lapply(1:ncol(type1),function(x){vegdist(t(train1[,c(1,x)]),methods = "jaccard")})#
+# results_2 <- lapply(1:ncol(type2),function(x){vegdist(t(train2[,c(1,x)]),methods = "jaccard")})#
+# results_3 <- lapply(1:ncol(type3),function(x){vegdist(t(train3[,c(1,x)]),methods = "jaccard")})#
+# results_4 <- lapply(1:ncol(type4),function(x){vegdist(t(train4[,c(1,x)]),methods = "jaccard")})#
+    mean_results <- do.call(cbind,lapply(1:length(subtype.classif_type), function(x){1-mean(unlist(results[[x]]))}))#
+# final_results_1 <- 1 - mean(unlist(results_1))#
+# final_results_2 <- 1 - mean(unlist(results_2))#
+# final_results_3 <- 1 - mean(unlist(results_3))#
+# final_results_4 <- 1 - mean(unlist(results_4))#
+    maximum <- max(mean_results)#
+    final_result <- which(mean_results == maximum)#
+return(final_result)#
+}
+final <-  lapply(1:ncol(test), function(x){compute.distance(subtype.classif,subtype.classif_type,test[,x],type,subtype_features)}))
+final <-  lapply(1:ncol(test), function(x){compute.distance(subtype.classif,subtype.classif_type,test[,x],type,subtype_features)})
+results <- lapply(1:length(subtype.classif_type),function(x){lapply(1:ncol(type[[x]]),function(y){(vegdist(t(train[,c(1,y)]),methods = "jaccard"))})})
+`compute.distance` <- function(subtype.classif,subtype.classif_type, test1, type, subtype_features){#
+    test_type <- lapply(1:length(subtype.classif_type), function(x){test[subtype_features[,x]]})#
+# test1 <- test[subtype_features[,1]]#
+# test2 <- test[subtype_features[,2]]#
+# test3 <- test[subtype_features[,3]]#
+# test4 <- test[subtype_features[,4]]#
+    train <- lapply(1:length(subtype.classif_type), function(x){cbind(test_type[[x]],type[[x]])})#
+# train1 <- cbind(test1,type1)#
+# train2 <- cbind(test2,type2)#
+# train3 <- cbind(test3,type3)#
+# train4 <- cbind(test4,type4)#
+    results <- lapply(1:length(subtype.classif_type),function(x){lapply(1:ncol(type[[x]]),function(y){(vegdist(t(train[[x]][,c(1,y)]),methods = "jaccard"))})})#
+# results_1 <- lapply(1:ncol(type1),function(x){vegdist(t(train1[,c(1,x)]),methods = "jaccard")})#
+# results_2 <- lapply(1:ncol(type2),function(x){vegdist(t(train2[,c(1,x)]),methods = "jaccard")})#
+# results_3 <- lapply(1:ncol(type3),function(x){vegdist(t(train3[,c(1,x)]),methods = "jaccard")})#
+# results_4 <- lapply(1:ncol(type4),function(x){vegdist(t(train4[,c(1,x)]),methods = "jaccard")})#
+    mean_results <- do.call(cbind,lapply(1:length(subtype.classif_type), function(x){1-mean(unlist(results[[x]]))}))#
+# final_results_1 <- 1 - mean(unlist(results_1))#
+# final_results_2 <- 1 - mean(unlist(results_2))#
+# final_results_3 <- 1 - mean(unlist(results_3))#
+# final_results_4 <- 1 - mean(unlist(results_4))#
+    maximum <- max(mean_results)#
+    final_result <- which(mean_results == maximum)#
+return(final_result)#
+}
+results <- lapply(1:length(subtype.classif_type),function(x){lapply(1:ncol(type[[x]]),function(y){(vegdist(t(train[,c(1,y)]),methods = "jaccard"))})})
+results <- lapply(1:length(subtype.classif_type),function(x){lapply(1:ncol(type[[x]]),function(y){(vegdist(t(train[[x]][,c(1,y)]),methods = "jaccard"))})})
+results <- lapply(1:length(subtype.classif_type),function(x){lapply(1:ncol(type[[x]]),function(y){(vegdist(t(train[[x]][,c(1,y)]),methods = "jaccard"))})})
+train[[1]]
+train[[1]][1]
+train[[1]][,c(1,1)]
+train[[1]][[,c(1,1)]]
+train[1][,c(1,1)]
+train[[1]]
+train[[1]][,1]
+train[[1]][,2]
+train[[2]][,1]
+train <- lapply(1:length(subtype.classif_type), function(x){cbind(test_type,type[[x]])})
+test_type
+test_type <- lapply(1:length(subtype.classif_type), function(x){test[subtype_features[,x]]})
+test_type
+test_type <- lapply(1:length(subtype.classif_type), function(x){test[,1][subtype_features[,x]]})
+test_type
+train <- lapply(1:length(subtype.classif_type), function(x){cbind(test_type[[x]],type[[x]])})
+train
+results <- lapply(1:length(subtype.classif_type),function(x){lapply(1:ncol(type[[x]]),function(y){(vegdist(t(train[[x]][,c(1,y)]),methods = "jaccard"))})})
+results
+mean_results <- do.call(cbind,lapply(1:length(subtype.classif_type), function(x){1-mean(unlist(results[[x]]))}))
+mean_results
+final <- compute.distance(subtype.classif,subtype.classif_type,test[,1],type,subtype_features)}))
+final <- compute.distance(subtype.classif,subtype.classif_type,test[,1],type,subtype_features)
+test[,1]
+final <- compute.distance(subtype.classif,subtype.classif_type,test[,1],type,subtype_features)
+final <- compute.distance(subtype.classif,subtype.classif_type,test[,2],type,subtype_features)}))
+final <- compute.distance(subtype.classif,subtype.classif_type,test[,2],type,subtype_features)
+test <- test[,2]
+test <- binary_barcode[,1:353]
+test1 <- test[,1]
+final <- compute.distance(subtype.classif,subtype.classif_type,test1,type,subtype_features)
+test1
+`compute.distance` <- function(subtype.classif,subtype.classif_type, test, type, subtype_features){#
+    test_type <- lapply(1:length(subtype.classif_type), function(x){test[subtype_features[,x]]})#
+# test1 <- test[subtype_features[,1]]#
+# test2 <- test[subtype_features[,2]]#
+# test3 <- test[subtype_features[,3]]#
+# test4 <- test[subtype_features[,4]]#
+    train <- lapply(1:length(subtype.classif_type), function(x){cbind(test_type[[x]],type[[x]])})#
+# train1 <- cbind(test1,type1)#
+# train2 <- cbind(test2,type2)#
+# train3 <- cbind(test3,type3)#
+# train4 <- cbind(test4,type4)#
+    results <- lapply(1:length(subtype.classif_type),function(x){lapply(1:ncol(type[[x]]),function(y){(vegdist(t(train[[x]][,c(1,y)]),methods = "jaccard"))})})#
+# results_1 <- lapply(1:ncol(type1),function(x){vegdist(t(train1[,c(1,x)]),methods = "jaccard")})#
+# results_2 <- lapply(1:ncol(type2),function(x){vegdist(t(train2[,c(1,x)]),methods = "jaccard")})#
+# results_3 <- lapply(1:ncol(type3),function(x){vegdist(t(train3[,c(1,x)]),methods = "jaccard")})#
+# results_4 <- lapply(1:ncol(type4),function(x){vegdist(t(train4[,c(1,x)]),methods = "jaccard")})#
+    mean_results <- do.call(cbind,lapply(1:length(subtype.classif_type), function(x){1-mean(unlist(results[[x]]))}))#
+# final_results_1 <- 1 - mean(unlist(results_1))#
+# final_results_2 <- 1 - mean(unlist(results_2))#
+# final_results_3 <- 1 - mean(unlist(results_3))#
+# final_results_4 <- 1 - mean(unlist(results_4))#
+    maximum <- max(mean_results)#
+    final_result <- which(mean_results == maximum)#
+return(final_result)#
+}
+final <- compute.distance(subtype.classif,subtype.classif_type,test1,type,subtype_features)
+final
+final <-  lapply(1:ncol(test), function(x){compute.distance(subtype.classif,subtype.classif_type,test[,x],type,subtype_features)}))
+final <-  lapply(1:ncol(test), function(x){compute.distance(subtype.classif,subtype.classif_type,test[,x],type,subtype_features)})
+expected <- lapply(1:ncol(test),function(x){as.integer(subtype.classif[names(subtype.classif) == colnames(binary_barcode)[x]])})#
+comp <- lapply(1:ncol(test), function(x){final_results[x]) == unlist(expected[x]),1,0)})#
+counts <- table(unlist(comp))#
+accuracy <- (counts[2]/(counts[1]+counts[2]))
+expected <- lapply(1:ncol(test),function(x){as.integer(subtype.classif[names(subtype.classif) == colnames(binary_barcode)[x]])})
+comp <- lapply(1:ncol(test), function(x){final_results[x]) == unlist(expected[x]),1,0)})
+comp <- lapply(1:ncol(test), function(x){final_results[x] == unlist(expected[x]),1,0)})
+comp <- lapply(1:ncol(test), function(x){ifelse(final_results[x] == unlist(expected[x]),1,0)})
+comp
+expected
+final
+final <-  do.call(cbind,lapply(1:ncol(test), function(x){compute.distance(subtype.classif,subtype.classif_type,test[,x],type,subtype_features)})))#
+expected <- do.call(cbind,lapply(1:ncol(test),function(x){as.integer(subtype.classif[names(subtype.classif) == colnames(binary_barcode)[x]])}))
+final <-  do.call(cbind,lapply(1:ncol(test), function(x){compute.distance(subtype.classif,subtype.classif_type,test[,x],type,subtype_features)}))#
+expected <- do.call(cbind,lapply(1:ncol(test),function(x){as.integer(subtype.classif[names(subtype.classif) == colnames(binary_barcode)[x]])}))
+final <-  lapply(1:ncol(test), function(x){compute.distance(subtype.classif,subtype.classif_type,test[,x],type,subtype_features)}))#
+expected <- do.call(cbind,lapply(1:ncol(test),function(x){as.integer(subtype.classif[names(subtype.classif) == colnames(binary_barcode)[x]])}))#
+comp <- do.call(cbind,lapply(1:ncol(test), function(x){final_results[x]) == unlist(expected[x]),1,0)}))
+final <-  lapply(1:ncol(test), function(x){compute.distance(subtype.classif,subtype.classif_type,test[,x],type,subtype_features)}))#
+expected <- do.call(cbind,lapply(1:ncol(test),function(x){as.integer(subtype.classif[names(subtype.classif) == colnames(binary_barcode)[x]])}))#
+comp <- do.call(cbind,lapply(1:ncol(test), function(x){final_results[x]) == unlist(expected[x]),1,0)})
+comp <- do.call(cbind,lapply(1:ncol(test), function(x){ifelse(final_results[x] == unlist(expected[x]),1,0)}))
+comp
+final <-  lapply(1:ncol(test), function(x){compute.distance(subtype.classif,subtype.classif_type,test[,x],type,subtype_features)}))
+final <-  lapply(1:ncol(test), function(x){compute.distance(subtype.classif,subtype.classif_type,test[,x],type,subtype_features)})
+expected <- do.call(cbind,lapply(1:ncol(test),function(x){as.integer(subtype.classif[names(subtype.classif) == colnames(binary_barcode)[x]])}))#
+comp <- do.call(cbind,lapply(1:ncol(test), function(x){ifelse(final_results[x] == unlist(expected[x]),1,0)}))
+expected
+comp
+expected <- lapply(1:ncol(test),function(x){as.integer(subtype.classif[names(subtype.classif) == colnames(binary_barcode)[x]])})#
+comp <- lapply(1:ncol(test), function(x){ifelse(final_results[x] == unlist(expected[x]),1,0)})
+expected
+comp
+final_results[1]
+expected[1]
+class(expected)
+class(final_results)
+expected <- as.integer(lapply(1:ncol(test),function(x){as.integer(subtype.classif[names(subtype.classif) == colnames(binary_barcode)[x]])}))#
+comp <- lapply(1:ncol(test), function(x){ifelse(final_results[x] == unlist(expected[x]),1,0)})
+comp
+expected
+final_results
+final
+comp <- lapply(1:ncol(test), function(x){ifelse(final[x] == unlist(expected[x]),1,0)})
+comp
+counts <- table(unlist(comp))#
+accuracy <- (counts[2]/(counts[1]+counts[2]))
+accuracy
