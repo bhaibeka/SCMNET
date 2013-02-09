@@ -73,49 +73,18 @@ rm(list=ls())
 	return(max_subtype)
 }
 
-# Can use the entire training set and subtype.weights instead of dividing it up per subtype as seen below.  Try this out tonight, and see if we get better results using mean/median.  Double check distance and similarity (hamming = distance, jaccard = distance)
-# Distance
-`compute.distance` <- function(subtype.classif,subtype.classif_type, test, type, subtype_features,binary_barcode){
-    binary_barcode_type <- lapply(1:length(subtype.classif_type), function(x){binary_barcode[,colnames(binary_barcode) %in% names(subtype.classif_type[[x]])]})
-    # binary_barcode_1 <- binary_barcode[,colnames(binary_barcode) %in% names(subtype.classif.1)]
-    # binary_barcode_2 <- binary_barcode[,colnames(binary_barcode) %in% names(subtype.classif.2)]
-    # binary_barcode_3 <- binary_barcode[,colnames(binary_barcode) %in% names(subtype.classif.3)]
-    # binary_barcode_4 <- binary_barcode[,colnames(binary_barcode) %in% names(subtype.classif.4)]
-
-    type <- lapply(1:length(subtype.classif_type), function(x){binary_barcode_type[[x]][subtype_features[,x],]})
-    # type1 <- binary_barcode_1[subtype_features[,1],]
-    # type2 <- binary_barcode_2[subtype_features[,2],]
-    # type3 <- binary_barcode_3[subtype_features[,3],]
-    # type4 <- binary_barcode_4[subtype_features[,4],]
-    
-    test_type <- lapply(1:length(subtype.classif_type), function(x){test[subtype_features[,x]]})
-    # test1 <- test[subtype_features[,1]]
-    # test2 <- test[subtype_features[,2]]
-    # test3 <- test[subtype_features[,3]]
-    # test4 <- test[subtype_features[,4]]
-    
-    train <- lapply(1:length(subtype.classif_type), function(x){cbind(test_type[[x]],type[[x]])})
-    # train1 <- cbind(test1,type1)
-    # train2 <- cbind(test2,type2)
-    # train3 <- cbind(test3,type3)
-    # train4 <- cbind(test4,type4)
-    
-    results <- lapply(1:length(subtype.classif_type),function(x){lapply(1:ncol(type[[x]]),function(y){vegdist(t(train[[x]][,c(1,y)]),methods = "hamming")})})
-    # results_1 <- lapply(1:ncol(type1),function(x){vegdist(t(train1[,c(1,x)]),methods = "jaccard")})
-    # results_2 <- lapply(1:ncol(type2),function(x){vegdist(t(train2[,c(1,x)]),methods = "jaccard")})
-    # results_3 <- lapply(1:ncol(type3),function(x){vegdist(t(train3[,c(1,x)]),methods = "jaccard")})
-    # results_4 <- lapply(1:ncol(type4),function(x){vegdist(t(train4[,c(1,x)]),methods = "jaccard")})
-    # mean_results <- do.call(cbind,lapply(1:length(subtype.classif_type), function(x){1-mean(unlist(results[[x]]))}))
-    
-    results2 <- do.call(cbind,lapply(1:length(subtype.classif_type), function(x){sort(unlist(results[[x]]),FALSE)[2]}))
-    # final_results_1 <- 1 - mean(unlist(results_1))
-    # final_results_2 <- 1 - mean(unlist(results_2))
-    # final_results_3 <- 1 - mean(unlist(results_3))
-    # final_results_4 <- 1 - mean(unlist(results_4))
-    
-    maximum <- min(results2)
-    final_result <- which(results2 == maximum)
-    
+# Jaccard Distance
+`compute.distance` <- function(subtype.classif, test, binary_barcode, subtype_features,subtype.weights, dist.type){
+    subtype.classif_type <- lapply(1:length(levels(subtype.classif)), function(x){subtype.classif[subtype.classif == x]})
+    binary_barcode_type <- lapply(1:length(subtype.classif_type),function(x){binary_barcode[subtype_features[,x],]})
+    test <- lapply(1:length(subtype.classif_type), function(x){test[subtype_features[,x]]})
+    train <- lapply(1:length(subtype.classif_type),function(x){cbind(test[[x]],binary_barcode_type[[x]])})
+    results <- lapply(1:length(subtype.classif_type),function(x){lapply(2:ncol(train[[x]]),function(y){dist.type(t(train[[x]][,c(1,y)]))})})
+    # results <- lapply(1:length(subtype.classif_type),function(x){lapply(2:ncol(train[[x]]),function(y){dist.type(t(train[[x]][,c(1,y)]))})})
+    final <- lapply(1:ncol(subtype.weights),function(x){(unlist(results[[x]]))*subtype.weights[,x]}) 
+    maximum <- lapply(1:ncol(subtype.weights),function(x){max(unlist(final[x]))})
+    final_maximum <- max(unlist(maximum))
+    final_result <- which(final_maximum == maximum)
 return(final_result)
 }
 
@@ -125,7 +94,7 @@ dist.standard <- function( adj ) {
 	## normalize
 	w <- w / max( w )
 	
-	return( w )
+	return( w[1,2] )
 }
 
 # Jaccard Distance
@@ -133,10 +102,10 @@ dist.standard <- function( adj ) {
 dist.jaccard <- function( adj ) {
 	w <- vegdist( adj, method="jaccard", upper=TRUE, diag=TRUE )
 	w <- as.matrix( w )
-	## convert to similarity
-	w <- 1 - w
-	
-	return( w )
+    # convert to similarity
+    w <- 1 - w
+    
+    return( w[1,2] )
 }
 
 ## Pearson's correlation
@@ -149,18 +118,29 @@ dist.pearson <- function( adj, cutoff=0 ) {
 	## remove edges less than cutoff
 	w[ w <= cutoff ] <- 0
 	
-	return( w )
+	return( w[1,2])
 }
 
 dist.hamming <- function( adj ) {
-	w <- hamming.distance( adj )
-	## normalize
-	w <- w / max( w )
-	## convert to similarity
-	w <- 1 - w
-	
-	return( w )
+	w <- vegdist( adj, method="hamming", upper=TRUE, diag=TRUE )
+	w <- as.matrix( w )
+    # normalize
+    # w <- w / max( unlist(w) )
+    # convert to similarity
+    w <- 1 - w
+    
+    return( w[1,2] )
 }
+
+# dist.hamming <- function( adj ) {
+#     w <- hamming.distance( adj )
+#     ## normalize
+#     # w <- w / max( unlist(w) )
+#     ## convert to similarity
+#     w <- 1 - w
+#     
+#     return( w[1,2] )
+# }
 
 
 #############
@@ -263,24 +243,18 @@ fit1 <- glmnet(data, subtype.classif, family = "multinomial")
 
 # cluster: ones and zeros for quality check -- need to do this! 
 
-# jaccard distance
+# distance
 binary_barcode <- compute.barcode(dataset=data, adjmatrix=aa)
 subtype.classif_type <- lapply(1:length(levels(subtype.classif)), function(x){subtype.classif[subtype.classif == x]})
-# subtype.classif.1 <- subtype.classif[subtype.classif == 1]
-# subtype.classif.2 <- subtype.classif[subtype.classif == 2]
-# subtype.classif.3 <- subtype.classif[subtype.classif == 3]
-# subtype.classif.4 <- subtype.classif[subtype.classif == 4]
 
 # use testing set as training set
 test <- binary_barcode[,1:353]
-final <-  lapply(1:ncol(test), function(x){compute.distance(subtype.classif,subtype.classif_type,test[,x],type,subtype_features,binary_barcode[,-test[,x]])})
+final <-  lapply(1:ncol(test), function(x){compute.distance(subtype.classif,test[,x],binary_barcode[,-test[,x]],subtype_features,subtype.weights[rownames(subtype.weights) %in% colnames(binary_barcode[,-test[,x]]),], dist.pearson)})
 
-#comparing subtypes:  jaccard distance
+#comparing subtypes: distance
 expected <- as.integer(lapply(1:ncol(test),function(x){as.integer(subtype.classif[names(subtype.classif) == colnames(binary_barcode)[x]])}))
 comp2 <- lapply(1:ncol(test), function(x){ifelse(unlist(final[x]) == expected[x],1,0)})
 counts2 <- table(unlist(comp2))
 accuracy2 <- (counts2[2]/(counts2[1]+counts2[2]))
 
-
-# test <- as.matrix(lapply(1: ncol(binary_barcode),function(x){vegdist(t(binary_barcode[,c(1,x)]),methods = "jaccard")}))
 	
