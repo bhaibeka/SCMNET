@@ -14,7 +14,7 @@ Procedure
 
 4) Feature selection, for each subtype s
 
-  4.1) measure of discriminative value: for each gene pair, frequency of values 1 in subtype s - max(frequency of values 1 in subtype q \ s),the larger the value, the more discriminative
+  	4.1) measure of discriminative value: for each gene pair, frequency of values 1 in subtype s - max(frequency of values 1 in subtype q \ s),the larger the value, the more discriminative
 	
 	4.2) measure of redundancy: Jaccard index between two gene pairs, the larger the index, the more redundant
 	
