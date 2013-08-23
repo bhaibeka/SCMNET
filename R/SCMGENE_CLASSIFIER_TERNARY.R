@@ -1,3 +1,7 @@
+# Dr. Benjamin Haibe-Kains
+# Heather Selby
+# Initial attempt at a ternary barcode instead of a binary barcode.  Work in progress.
+
 rm(list=ls())
 
 #############
