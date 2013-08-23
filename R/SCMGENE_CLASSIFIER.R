@@ -1,3 +1,6 @@
+# Dr. Benjamin Haibe-Kains
+# Heather Selby
+
 rm(list=ls())
 
 #############
